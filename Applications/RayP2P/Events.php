@@ -68,12 +68,20 @@ class Events
 	   }
 	   switch($data['action']){
 			default:
-				$msg = array(
-					"action"=>"signal",
-					"from_peer_id"=>$data['peer_id'],
-					"data"=>$data['data'],
-				);
-				Gateway::sendToUid($data['to_peer_id'], json_encode($msg));
+				if(Gateway::isUidOnline($data['peer_id'])){
+					$msg = array(
+						"action"=>"signal",
+						"from_peer_id"=>$data['to_peer_id'],
+					);
+					Gateway::sendToUid($data['peer_id'], json_encode($msg));
+				}else{
+					$msg = array(
+						"action"=>"signal",
+						"from_peer_id"=>$data['peer_id'],
+						"data"=>$data['data'],
+					);
+					Gateway::sendToUid($data['to_peer_id'], json_encode($msg));
+				}
 				break;
 		   
 	   }
