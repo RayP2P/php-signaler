@@ -18,10 +18,12 @@ Download programe.
 ## Configure
 
 ###Full package
+
 Don't really need to change anything. 
 You just need to change the ssl settings in Applications/RayP2P/start_gateway.php
 
 ###Master
+
 Applications/RayP2P/start_gateway.php 
 
 1.Change the ssl settings. 
@@ -30,6 +32,7 @@ Applications/RayP2P/start_gateway.php
 
 
 ###Cluster
+
 Applications/RayP2P/start_businessworker.php 
 
 1.Change $worker->registerAddress To Register IP. 
