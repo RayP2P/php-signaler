@@ -10,10 +10,10 @@ Written in full pure PHP. High performance and support cluster.
 3. POSIX and PCNTL extensions for PHP
 
 ## Install
-About enviroment, you can review the webpage from [Workerman](http://www.workerman.com "Workerman")
+About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
 
 Download programe.
-    git clone https://github.com/RayP2P/hlsjs-p2p-signaler
+	git clone https://github.com/RayP2P/hlsjs-p2p-signaler
 
 ## Configure
 
