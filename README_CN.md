@@ -17,12 +17,12 @@ Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket�
 
 ## 配置
 
-##单机配置
+### 单机配置
 
 仅需要更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项
 
 ===集群式部署===
-##前端配置
+### 前端配置
 
 
 1.更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项
@@ -31,7 +31,7 @@ Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket�
 
 3.[可选]如果需要部署多个Gateway，可单独配置 register 服务端。$gateway->registerAddress
 
-##后端配置
+### 后端配置
 
 Applications/RayP2P/start_businessworker.php 
 
