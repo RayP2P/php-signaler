@@ -1,4 +1,4 @@
-# hlsjs-p2p-signaler
+# php-signaler
 ## Introduction
 This is an object build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
@@ -10,10 +10,10 @@ Written in full pure PHP. High performance and support cluster.
 3. POSIX and PCNTL extensions for PHP
 
 ## Install
-About enviroment, you can review the webpage from [Workerman](http://www.workerman.com "Workerman")
+About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
 
 Download programe.
-    git clone https://github.com/RayP2P/hlsjs-p2p-signaler
+	git clone https://github.com/RayP2P/hlsjs-p2p-signaler
 
 ## Configure
 
