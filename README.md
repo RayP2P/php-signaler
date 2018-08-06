@@ -1,4 +1,4 @@
-# hlsjs-p2p-signaler
+# php-signaler
 ## Introduction
 This is an object build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
