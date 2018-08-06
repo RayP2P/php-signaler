@@ -13,7 +13,7 @@ Written in full pure PHP. High performance and support cluster.
 About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
 
 Download programe.
-	git clone https://github.com/RayP2P/hlsjs-p2p-signaler
+	git clone https://github.com/RayP2P/php-signaler
 
 ## Configure
 
@@ -41,16 +41,16 @@ Applications/RayP2P/start_businessworker.php
 
 1.Running in Debug mode.
 
-	php hlsjs-p2p-signaler/start.php
+	php php-signaler/start.php
 
 2.Running in Daemon mode.
 
-	php hlsjs-p2p-signaler/start.php -d
+	php php-signaler/start.php -d
 	
 3.Running in Master mode.(exclude bussniess worker)
 
-	php hlsjs-p2p-signaler/master.php -d
+	php php-signaler/master.php -d
 	
 4.Running in Cluster mode.(only bussniess worker)
 
-	php hlsjs-p2p-signaler/cluster.php -d
+	php php-signaler/cluster.php -d
