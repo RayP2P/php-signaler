@@ -2,7 +2,9 @@
 ## 介绍
 php-signaler 是一个基于 [Workerman](https://github.com/walkor/Workerman "Workerman") 运行的信令服务器（适用于 [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") 的信令服务）
 
-Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket框架，使用 Workerman Gateway 可以既简单的部署集群式服务，方便横向扩展。
+Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket框架。
+
+使用 Workerman Gateway 可以既简单的部署集群式服务，方便横向扩展。
 
 ## 运行需求
 1. PHP 5.3 或更高
