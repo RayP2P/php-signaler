@@ -3,7 +3,7 @@
 This is an object build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
 Written in full pure PHP. High performance and support cluster.
-
+[中文文档](https://github.com/RayP2P/php-signaler/blob/master/README_CN.md "中文文档")
 ## Requires
 1. PHP 5.3 or Higher
 2. A POSIX compatible operating system (Linux, OSX, BSD)
@@ -17,12 +17,12 @@ Download programe.
 
 ## Configure
 
-###Full package
+### Full package
 
 Don't really need to change anything. 
 You just need to change the ssl settings in Applications/RayP2P/start_gateway.php
 
-###Master
+### Master
 
 Applications/RayP2P/start_gateway.php 
 
@@ -31,7 +31,7 @@ Applications/RayP2P/start_gateway.php
 2.Change the $gateway->lanIp to Lan interface IP. 
 
 
-###Cluster
+### Cluster
 
 Applications/RayP2P/start_businessworker.php 
 
