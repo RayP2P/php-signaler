@@ -23,11 +23,15 @@ You just need to change the ssl settings in Applications/RayP2P/start_gateway.ph
 
 ###Master
 Applications/RayP2P/start_gateway.php 
+
 1.Change the ssl settings. 
+
 2.Change the $gateway->lanIp to Lan interface IP. 
+
 
 ###Cluster
 Applications/RayP2P/start_businessworker.php 
+
 1.Change $worker->registerAddress To Register IP. 
 
 ## Running as service
