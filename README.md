@@ -58,3 +58,17 @@ Applications/RayP2P/start_businessworker.php
 4.Running in Cluster mode.(only bussniess worker)
 
 	php php-signaler/cluster.php -d
+
+## Configure hlsjs-p2p-engine
+
+1.Change the signal address to your address
+### Example
+	var hlsjsConfig = {
+        debug: false,
+        maxBufferHole: 3,
+        p2pConfig: {
+            logLevel: 'warn',
+            wsSignalerAddr: 'wss://example.com/ws',
+        }
+    };
+More info visit [hlsjs-p2p-engine API.md](https://github.com/cdnbye/hlsjs-p2p-engine/blob/master/docs/English/API.md "hlsjs-p2p-engine API.md")
