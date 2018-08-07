@@ -1,9 +1,9 @@
 # php-signaler
 
-[中文文档](https://github.com/RayP2P/php-signaler/blob/master/README_CN.md "中文文档")
+[中文文档](blob/master/README_CN.md "中文文档")
 
 ## Introduction
-This is an object build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
+This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
 Written in full pure PHP. High performance and support cluster.
 
