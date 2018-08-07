@@ -67,4 +67,4 @@ Applications/RayP2P/start_businessworker.php
             wsSignalerAddr: 'wss://example.com/ws',
         }
     };
-更多播放器配置项请参阅 [hlsjs-p2p-engine API.md](https://github.com/cdnbye/hlsjs-p2p-engine/blob/master/docs/English/API.md "hlsjs-p2p-engine API.md")
+更多播放器配置项请参阅 [hlsjs-p2p-engine API.md](https://github.com/cdnbye/hlsjs-p2p-engine/blob/master/docs/%E4%B8%AD%E6%96%87/API.md "hlsjs-p2p-engine API.md")
