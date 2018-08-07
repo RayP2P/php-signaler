@@ -68,7 +68,7 @@ class Events
 	   }
 	   switch($data['action']){
 			default:
-				if(Gateway::isUidOnline($data['peer_id'])){
+				if(!Gateway::isUidOnline($data['to_peer_id'])){
 					$msg = array(
 						"action"=>"signal",
 						"from_peer_id"=>$data['to_peer_id'],
