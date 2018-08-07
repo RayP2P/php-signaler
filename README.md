@@ -64,10 +64,7 @@ Applications/RayP2P/start_businessworker.php
 1.Change the signal address to your address
 ### Example
 	var hlsjsConfig = {
-        debug: false,
-        maxBufferHole: 3,
         p2pConfig: {
-            logLevel: 'warn',
             wsSignalerAddr: 'wss://example.com/ws',
         }
     };
