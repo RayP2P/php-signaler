@@ -67,6 +67,8 @@ class Events
 		   return;
 	   }
 	   switch($data['action']){
+			case 'getPeers':
+				break;
 			default:
 				if(!Gateway::isUidOnline($data['to_peer_id'])){
 					$msg = array(
