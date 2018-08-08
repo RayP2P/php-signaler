@@ -1,9 +1,9 @@
 # php-signaler
 
-[中文文档](https://github.com/RayP2P/php-signaler/blob/master/README_CN.md "中文文档")
+[中文文档](README_CN.md "中文文档")
 
 ## Introduction
-This is an object build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
+This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
 Written in full pure PHP. High performance and support cluster.
 
@@ -15,7 +15,8 @@ Written in full pure PHP. High performance and support cluster.
 ## Install
 About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
 
-Download programe.
+Download programe. 
+
 	git clone https://github.com/RayP2P/php-signaler
 
 ## Configure
@@ -57,3 +58,14 @@ Applications/RayP2P/start_businessworker.php
 4.Running in Cluster mode.(only bussniess worker)
 
 	php php-signaler/cluster.php -d
+
+## Configure hlsjs-p2p-engine
+
+1.Change the signal address to your address
+### Example
+	var hlsjsConfig = {
+        p2pConfig: {
+            wsSignalerAddr: 'wss://example.com/ws',
+        }
+    };
+More info visit [hlsjs-p2p-engine API.md](https://github.com/cdnbye/hlsjs-p2p-engine/blob/master/docs/English/API.md "hlsjs-p2p-engine API.md")

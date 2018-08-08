@@ -57,3 +57,14 @@ Applications/RayP2P/start_businessworker.php
 4.运行后端服务（仅后端）
 
 	php php-signaler/cluster.php -d
+
+## 配置播放器
+
+1.更改信令服务器地址为您的信令服务器地址
+### 范例
+	var hlsjsConfig = {
+        p2pConfig: {
+            wsSignalerAddr: 'wss://example.com/ws',
+        }
+    };
+更多播放器配置项请参阅 [hlsjs-p2p-engine API.md](https://github.com/cdnbye/hlsjs-p2p-engine/blob/master/docs/%E4%B8%AD%E6%96%87/API.md "hlsjs-p2p-engine API.md")
