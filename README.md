@@ -2,6 +2,11 @@
 
 [中文文档](README_CN.md "中文文档")
 
+## Contact
+If you need any help in emergency, you can send a message to me on 
+Skype:linke_china
+QQ:1928886288
+
 ## Introduction
 This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
 
