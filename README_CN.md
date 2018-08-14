@@ -1,8 +1,4 @@
 # php-signaler
-## 联系我
-如果您想要即时与我联系，可以在
-Skype:linke_china
-或者 QQ：1928886288
 ## 介绍
 php-signaler 是一个基于 [Workerman](https://github.com/walkor/Workerman "Workerman") 运行的信令服务器（适用于 [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") 的信令服务）
 
