@@ -35,6 +35,7 @@ $context = array(
 $gateway = new Gateway("websocket://0.0.0.0:443",$context);
 // gateway名称，status方便查看
 $gateway->name = 'RayP2P GateWay';
+$gateway->transport = 'ssl';
 // gateway进程数
 $gateway->count = 4;
 // 本机ip，分布式部署时使用内网ip
