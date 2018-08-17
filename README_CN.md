@@ -26,13 +26,13 @@ Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket�
 
 ### 单机配置
 
-仅需要更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项
+仅需要更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项（非必须选项，请查看备注）
 
 ===集群式部署===
 ### 前端配置
 
 
-1.更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项
+1.更改 Applications/RayP2P/start_gateway.php 中的 SSL 证书的设置项（非必须选项，请查看备注）
 
 2.更改 Applications/RayP2P/start_gateway.php 中的  $gateway->lanIp 为内网IP（公网IP亦可）
 
