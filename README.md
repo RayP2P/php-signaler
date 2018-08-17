@@ -29,13 +29,13 @@ Download programe.
 ### Full package
 
 Don't really need to change anything. 
-You just need to change the ssl settings in Applications/RayP2P/start_gateway.php
+You just need to change the ssl settings in Applications/RayP2P/start_gateway.php（not necenssary,Read the comment）
 
 ### Master
 
 Applications/RayP2P/start_gateway.php 
 
-1.Change the ssl settings. 
+1.Change the ssl settings. （not necenssary,Read the comment）
 
 2.Change the $gateway->lanIp to Lan interface IP. 
 
