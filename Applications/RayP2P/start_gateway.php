@@ -20,14 +20,13 @@ use \Workerman\Autoloader;
 // 自动加载类
 require_once __DIR__ . '/../../vendor/autoload.php';
 
+
 $context = array(
-    // 更多ssl选项请参考手册 http://php.net/manual/zh/context.ssl.php
     'ssl' => array(
-        // 请使用绝对路径
-        'local_cert'                 => '/root/server.pem', // 也可以是crt文件
+        'local_cert'                 => '/root/server.pem',
         'local_pk'                   => '/root/server.key',
         'verify_peer'                => false,
-        // 'allow_self_signed' => true, //如果是自签名证书需要开启此选项
+        // 'allow_self_signed' => true, //If you are using self signed certification. please remove the comment.
     )
 );
 
@@ -35,6 +34,7 @@ $context = array(
 $gateway = new Gateway("websocket://0.0.0.0:443",$context);
 // gateway名称，status方便查看
 $gateway->name = 'RayP2P GateWay';
+//If you are not using WSS protocol, please comment the next line, remove ',$context' from the last 2 lines, and remember to change the port.
 $gateway->transport = 'ssl';
 // gateway进程数
 $gateway->count = 4;
