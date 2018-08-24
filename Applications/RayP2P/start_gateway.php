@@ -32,10 +32,10 @@ if($config['wss']){
 			// 'allow_self_signed' => true, //If you are using self signed certification. please remove the comment.
 		)
 	);
-	$gateway = new Gateway("websocket://0.0.0.0:443",$context);
+	$gateway = new Gateway("websocket://0.0.0.0:{$config['gatewayPort']}",$context);
 	$gateway->transport = 'ssl';
 }else{
-	$gateway = new Gateway("websocket://0.0.0.0:80");
+	$gateway = new Gateway("websocket://0.0.0.0:{$config['gatewayPort']}");
 }
 // gateway名称，status方便查看
 $gateway->name = 'Signaler GateWay';
