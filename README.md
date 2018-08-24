@@ -52,9 +52,9 @@ Download programe.
 
 ## Configure
 
-all you need to focus is config.php
+all you need to focus is [config.php](https://github.com/RayP2P/php-signaler/blob/master/config.php "config.php")
 	
-	//Gateway LanIP,change it when you are using in cluster.
+	//Gateway LanIP,change it when you are using in cluster.(public IP is also could be use, but not suggested.)
 	'lanIP'=>'127.0.0.1',
 	//Register Address
 	'registerAddress'=>'127.0.0.1',
@@ -73,6 +73,38 @@ all you need to focus is config.php
 	//Bussiness Workers
 	'bussinessWorkers'=>4,
 
+## Run in single server.
+	
+	php php-signaler/start_all.php
+	
+	//test your signaler service. 
+	//if the test is success, add " -d" argument to running the service in daemon mode.
+	
+	php php-signaler/start_all.php -d
+	
+## Run in cluster mode.(at least need 2 servers,suggest at least 3 servers.)
+
+	// Keep all server have the same content in config.php expect "lanIP"
+	// lanIP is only thing you must to change when you setting up Gateway Server.
+	
+	//1. run register server.[only need setup one server]
+	//This server is connecting gateway and worker.it will just a low loadAvg server.
+	php php-signaler/start_register.php
+	
+	//2. run worker server.[when the loadAvg is higher than expect, you need add more.]
+	//This server is working to process all the logical.
+	php php-signaler/start_worker.php
+	
+	//3. run gateway server.[when the loadAvg is higher than expect, you need add more.]
+	//This server is face to user, it needs public IP address.
+	php php-signaler/start_gateway.php
+	
+	//4. Finally , test your signaler service. 
+	//if the test is success, add " -d" argument to running the service in daemon mode.
+	php php-signaler/start_register.php -d
+	php php-signaler/start_worker.php -d
+	php php-signaler/start_gateway.php -d
+	
 ## Configure hlsjs-p2p-engine
 
 1.Change the signal address to your address
