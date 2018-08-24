@@ -19,40 +19,42 @@ use \Workerman\Autoloader;
 
 // 自动加载类
 require_once __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../config.php';
 
-
-$context = array(
-    'ssl' => array(
-        'local_cert'                 => '/root/server.pem',
-        'local_pk'                   => '/root/server.key',
-        'verify_peer'                => false,
-        // 'allow_self_signed' => true, //If you are using self signed certification. please remove the comment.
-    )
-);
 
 // gateway 进程，这里使用Text协议，可以用telnet测试
-$gateway = new Gateway("websocket://0.0.0.0:443",$context);
+if($config['wss']){
+	$context = array(
+		'ssl' => array(
+			'local_cert'                 => $config['cert'],
+			'local_pk'                   => $config['key'],
+			'verify_peer'                => false,
+			// 'allow_self_signed' => true, //If you are using self signed certification. please remove the comment.
+		)
+	);
+	$gateway = new Gateway("websocket://0.0.0.0:443",$context);
+	//If you are not using WSS protocol, please comment the next line, remove ',$context' from the last 2 lines, and remember to change the port.
+	$gateway->transport = 'ssl';
+}else{
+	$gateway = new Gateway("websocket://0.0.0.0:80");
+}
 // gateway名称，status方便查看
-$gateway->name = 'RayP2P GateWay';
-//If you are not using WSS protocol, please comment the next line, remove ',$context' from the last 2 lines, and remember to change the port.
-$gateway->transport = 'ssl';
+$gateway->name = 'Signaler GateWay';
 // gateway进程数
-$gateway->count = 4;
+$gateway->count = $config['gatewayWorkers'];
 // 本机ip，分布式部署时使用内网ip
-$gateway->lanIp = '127.0.0.1';
+$gateway->lanIp = $config['lanIP'];
 // 内部通讯起始端口，假如$gateway->count=4，起始端口为4000
 // 则一般会使用4000 4001 4002 4003 4个端口作为内部通讯端口 
 $gateway->startPort = 2900;
 // 服务注册地址
-$gateway->registerAddress = '127.0.0.1:1238';
-
+$gateway->registerAddress = $config['registerAddress'].':'.$config['registerPort'];
 // 心跳间隔
 $gateway->pingInterval = 10;
 // RFC格式心跳
 $gateway->pingRfc = true;
 // 心跳无响应限制
 $gateway->pingNotResponseLimit = 0;
-
 // 如果不是在根目录启动，则运行runAll方法
 if(!defined('GLOBAL_START'))
 {

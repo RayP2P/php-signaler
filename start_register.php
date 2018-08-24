@@ -28,7 +28,6 @@ define('GLOBAL_START', 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-require_once __DIR__ . '/Applications/RayP2P/start_gateway.php';
 require_once __DIR__ . '/Applications/RayP2P/start_register.php';
 // 运行所有服务
 Worker::runAll();

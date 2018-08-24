@@ -19,15 +19,16 @@ use \Workerman\Autoloader;
 
 // 自动加载类
 require_once __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../config.php';
 
 // bussinessWorker 进程
 $worker = new BusinessWorker();
 // worker名称
-$worker->name = 'RayP2P Worker';
+$worker->name = 'Signaler Worker';
 // bussinessWorker进程数量
-$worker->count = 4;
+$worker->count = $config['bussinessWorkers'];
 // 服务注册地址
-$worker->registerAddress = '127.0.0.1:1238';
+$worker->registerAddress = $config['registerAddress'].':'.$config['registerPort'];
 
 // 如果不是在根目录启动，则运行runAll方法
 if(!defined('GLOBAL_START'))

@@ -16,10 +16,10 @@ use \GatewayWorker\Register;
 
 // 自动加载类
 require_once __DIR__ . '/../../vendor/autoload.php';
-
+require __DIR__ . '/../../config.php';
 // register 必须是text协议
-$register = new Register('text://0.0.0.0:1238');
-$register->name = 'RayP2P Register';
+$register = new Register('text://0.0.0.0:'.$config['registerPort']);
+$register->name = 'Signaler Register';
 
 // 如果不是在根目录启动，则运行runAll方法
 if(!defined('GLOBAL_START'))
