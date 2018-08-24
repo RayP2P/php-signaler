@@ -25,14 +25,23 @@ Basically this is already support you to run this project,but if you are face to
 ### Optimize
 
 If you are using PHP 5.3.3, you can only install libevent extension.
+
 	pecl install channel://pecl.php.net/libevent-0.1.0 
+	
 	//Attention: "libevent installation [autodetect]:" message Enter
+	
 	echo extension=libevent.so > /etc/php.d/libevent.ini
+	
 If your PHP version is higher than 5.3.3, install event extension will better.
+
 	pecl install event
+	
 	//Attention: Include libevent OpenSSL support [yes] : type "no" then Enter，
+	
 	//Attention: PHP Namespace for all Event classes :type "yes" then Enter
+	
 	//Otherwise just Enter.
+	
 	echo extension=event.so > /etc/php.d/event.ini
 	
 Download programe. 
@@ -40,7 +49,9 @@ Download programe.
 	git clone https://github.com/RayP2P/php-signaler
 
 ## Configure
+
 	wait for update.
+
 ## Configure hlsjs-p2p-engine
 
 1.Change the signal address to your address
