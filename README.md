@@ -4,7 +4,9 @@
 
 ## Introduction
 This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman").
+
 Cloud support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
+
 Technically support all WebRTC signaler service.
 
 Written in full pure PHP. High performance and support cluster.
@@ -15,12 +17,12 @@ Written in full pure PHP. High performance and support cluster.
 3. POSIX and PCNTL extensions for PHP
 
 ## Install
-About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
 ### CentOS
 
 	yum install php-cli php-process git gcc php-devel php-pear libevent-devel -y
 
-Basically this is already support you to run this project,but if you are face to more than 1000 connections, please read Optimize character.
+Basically this is already support you to run this project.
+But if you are face to more than 1000 connections, please read Optimize character.
 
 ### Optimize
 
