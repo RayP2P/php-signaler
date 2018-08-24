@@ -33,7 +33,6 @@ if($config['wss']){
 		)
 	);
 	$gateway = new Gateway("websocket://0.0.0.0:443",$context);
-	//If you are not using WSS protocol, please comment the next line, remove ',$context' from the last 2 lines, and remember to change the port.
 	$gateway->transport = 'ssl';
 }else{
 	$gateway = new Gateway("websocket://0.0.0.0:80");

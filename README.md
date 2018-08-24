@@ -2,13 +2,10 @@
 
 [中文文档](README_CN.md "中文文档")
 
-## Contact
-If you need any help in emergency, you can send a message to me on 
-Skype:linke_china
-QQ:1928886288
-
 ## Introduction
-This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman") to support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
+This is a project build with [Workerman](https://github.com/walkor/Workerman "Workerman").
+Cloud support [hlsjs-p2p-engine](https://github.com/cdnbye/hlsjs-p2p-engine "hlsjs-p2p-engine") signaler service.
+Technically support all WebRTC signaler service.
 
 Written in full pure PHP. High performance and support cluster.
 
@@ -19,51 +16,31 @@ Written in full pure PHP. High performance and support cluster.
 
 ## Install
 About enviroment, you can review the webpage from [Workerman](http://www.workerman.net "Workerman")
+### CentOS
 
+	yum install php-cli php-process git gcc php-devel php-pear libevent-devel -y
+
+Basically this is already support you to run this project,but if you are face to more than 1000 connections, please read Optimize character.
+
+### Optimize
+
+If you are using PHP 5.3.3, you can only install libevent extension.
+	pecl install channel://pecl.php.net/libevent-0.1.0 
+	//Attention: "libevent installation [autodetect]:" message Enter
+	echo extension=libevent.so > /etc/php.d/libevent.ini
+If your PHP version is higher than 5.3.3, install event extension will better.
+	pecl install event
+	//Attention: Include libevent OpenSSL support [yes] : type "no" then Enter，
+	//Attention: PHP Namespace for all Event classes :type "yes" then Enter
+	//Otherwise just Enter.
+	echo extension=event.so > /etc/php.d/event.ini
+	
 Download programe. 
 
 	git clone https://github.com/RayP2P/php-signaler
 
 ## Configure
-
-### Full package
-
-Don't really need to change anything. 
-You just need to change the ssl settings in Applications/RayP2P/start_gateway.php（not necenssary,Read the comment）
-
-### Master
-
-Applications/RayP2P/start_gateway.php 
-
-1.Change the ssl settings. （not necenssary,Read the comment）
-
-2.Change the $gateway->lanIp to Lan interface IP. 
-
-
-### Cluster
-
-Applications/RayP2P/start_businessworker.php 
-
-1.Change $worker->registerAddress To Register IP. 
-
-## Running as service
-
-1.Running in Debug mode.
-
-	php php-signaler/start.php
-
-2.Running in Daemon mode.
-
-	php php-signaler/start.php -d
-	
-3.Running in Master mode.(exclude bussniess worker)
-
-	php php-signaler/master.php -d
-	
-4.Running in Cluster mode.(only bussniess worker)
-
-	php php-signaler/cluster.php -d
-
+	wait for update.
 ## Configure hlsjs-p2p-engine
 
 1.Change the signal address to your address
