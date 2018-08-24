@@ -89,18 +89,22 @@ all you need to focus is [config.php](https://github.com/RayP2P/php-signaler/blo
 	
 	//1. run register server.[only need setup one server]
 	//This server is connecting gateway and worker.it will just a low loadAvg server.
+	
 	php php-signaler/start_register.php
 	
 	//2. run worker server.[when the loadAvg is higher than expect, you need add more.]
 	//This server is working to process all the logical.
+	
 	php php-signaler/start_worker.php
 	
 	//3. run gateway server.[when the loadAvg is higher than expect, you need add more.]
 	//This server is face to user, it needs public IP address.
+	
 	php php-signaler/start_gateway.php
 	
 	//4. Finally , test your signaler service. 
 	//if the test is success, add " -d" argument to running the service in daemon mode.
+	
 	php php-signaler/start_register.php -d
 	php php-signaler/start_worker.php -d
 	php php-signaler/start_gateway.php -d
