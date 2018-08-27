@@ -19,7 +19,9 @@ Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket�
 当前信令服务集群使用了
 
 2 台 前端 Gateway 服务器
+
 2 台 后端 Worker  服务器
+
 1 台 中间件 Register 服务器
 
 信令服务地址：wss://free.freesignal.net
