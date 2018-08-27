@@ -26,8 +26,8 @@ require __DIR__ . '/../../config.php';
 if($config['wss']){
 	$context = array(
 		'ssl' => array(
-			'local_cert'                 => $config['cert'],
-			'local_pk'                   => $config['key'],
+			'local_cert'                 => $config['wss_cert'],
+			'local_pk'                   => $config['wss_key'],
 			'verify_peer'                => false,
 			// 'allow_self_signed' => true, //If you are using self signed certification. please remove the comment.
 		)
