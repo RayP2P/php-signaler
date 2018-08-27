@@ -10,6 +10,20 @@ Workerman 是使用纯PHP原生代码编写的高性能，异步处理的Socket�
 
 使用 Workerman Gateway 可以简单的部署集群式服务，方便横向扩展。
 
+## 免费公开的信令服务器
+
+信令服务地址：wss://free.freesignal.net
+
+为了减少您的工作量，我们维护了一个基于本项目的 免费公开信令服务
+
+当前信令服务集群使用了
+
+2 台 前端 Gateway 服务器
+2 台 后端 Worker  服务器
+1 台 中间件 Register 服务器
+
+信令服务地址：wss://free.freesignal.net
+
 ## 运行需求
 1. PHP 5.3 或更高
 2. 支持 POSIX 兼容的系统 (Linux, OSX, BSD)
