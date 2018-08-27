@@ -1,5 +1,4 @@
 # php-signaler
-
 ## 介绍
 php-signaler 是一个基于 [Workerman](https://github.com/walkor/Workerman "Workerman") 运行的信令服务器
 
